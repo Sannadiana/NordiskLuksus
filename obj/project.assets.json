@@ -12077,11 +12077,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/i506272/Documents/GitHub/NordiskLuksus/NordiskLuksus.csproj",
-      "projectName": "NordiskLuksus",
-      "projectPath": "/Users/i506272/Documents/GitHub/NordiskLuksus/NordiskLuksus.csproj",
+      "projectUniqueName": "/Users/i506272/Documents/GitHub/NordiskLuksusMVC/NordiskLuksusMVC.csproj",
+      "projectName": "NordiskLuksusMVC",
+      "projectPath": "/Users/i506272/Documents/GitHub/NordiskLuksusMVC/NordiskLuksusMVC.csproj",
       "packagesPath": "/Users/i506272/.nuget/packages/",
-      "outputPath": "/Users/i506272/Documents/GitHub/NordiskLuksus/obj/",
+      "outputPath": "/Users/i506272/Documents/GitHub/NordiskLuksusMVC/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
