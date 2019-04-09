@@ -26,7 +26,7 @@ public async Task<IActionResult> EditProduct(int? id){
 
 [HttpPost]
 
-public async Task<IActionResult> EditProduct(int? id,[Bind("ID, Title, Desc, Price")]Product product){
+public async Task<IActionResult> EditProduct(int? id,[Bind("ID, Title, ImageSrc, Desc, Price")]Product product){
     _context.Update(product);
     await _context.SaveChangesAsync();
     return RedirectToAction(nameof(AllProducts));
@@ -38,7 +38,7 @@ public async Task<IActionResult> DeleteProduct(int? id){
     return View(product);
 }
 
-[HttpPost,ActionName("DeleteMovie")]
+[HttpPost,ActionName("DeleteProduct")]
 
 
 public async Task<IActionResult> DeleteProductConfirm(int? id){
@@ -48,16 +48,16 @@ public async Task<IActionResult> DeleteProductConfirm(int? id){
     return RedirectToAction(nameof(AllProducts));
 }
 
-
-public IActionResult CreateProduct(){
-    return View();
-}
+[HttpGet]
+        public IActionResult CreateProduct(){
+            return View();
+        }
 
 [HttpPost]
 
-public async Task<IActionResult> CreateProduct([Bind("ID, Title, Desc,Price")]Product product){
+public async Task<IActionResult> CreateProduct([Bind("ID", "Title","ImageSrc","Desc","Price")]Product product){
     if(ModelState.IsValid){
-         _context.Add(product);
+         _context.Product.Add(product);
          await _context.SaveChangesAsync();
         return RedirectToAction(nameof(AllProducts));
     }else{

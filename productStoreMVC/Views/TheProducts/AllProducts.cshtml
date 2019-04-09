@@ -12,13 +12,14 @@
             @{
                 foreach (var product in Model)
                 {
+                <article>
                     <h4>@product.Title</h4>
-                    <img src=@product.ImageSrc>
+                     <img src="~/images/@product.ImageSrc"/>
                     <p>@product.Desc</p>
                     <p>Pris i NOK: @product.Price</p>
                      <a asp-controller="TheProducts" asp-action="EditProduct" asp-route-id="@product.ID">Endre</a>
                     <a asp-controller="TheProducts" asp-action="DeleteProduct" asp-route-id="@product.ID">Slett</a>
-                
+                </article>
     
         
                 }
