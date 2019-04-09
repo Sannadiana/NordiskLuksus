@@ -1,6 +1,10 @@
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 using productStoreMVC.Models;
 
@@ -8,10 +12,6 @@ namespace productStoreMVC.Controllers{
 
 public class TheProductsController:Controller{
 private readonly ProductContext _context;
-
-public TheProductsController(ProductContext context){
-    _context = context;
-}
 
 public async Task<IActionResult> AllProducts(){
     List<Product> productList = await _context.Product.ToListAsync();
@@ -26,7 +26,7 @@ public async Task<IActionResult> EditProduct(int? id){
 
 [HttpPost]
 
-public async Task<IActionResult> EditProduct(int? id,[Bind("ID, Title, Price")]Product product){
+public async Task<IActionResult> EditProduct(int? id,[Bind("ID, Title, Desc, Price")]Product product){
     _context.Update(product);
     await _context.SaveChangesAsync();
     return RedirectToAction(nameof(AllProducts));
@@ -55,11 +55,39 @@ public IActionResult CreateProduct(){
 
 [HttpPost]
 
-public async Task<IActionResult> CreateProduct([Bind("ID, Title,Price")]Product product){
-    _context.Add(product);
-    await _context.SaveChangesAsync();
-    return RedirectToAction(nameof(AllProducts));
+public async Task<IActionResult> CreateProduct([Bind("ID, Title, Desc,Price")]Product product){
+    if(ModelState.IsValid){
+         _context.Add(product);
+         await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(AllProducts));
+    }else{
+        return View(product);
+    }
 }
+
+private readonly IHostingEnvironment _hosting;
+        public TheProductsController(ProductContext context, IHostingEnvironment hosting){
+            _context = context;
+            _hosting = hosting;
+        }        
+
+ 
+ [HttpGet]
+        public IActionResult UploadImage(){
+            return View();
+        }
+
+    [HttpPost]
+         public IActionResult UploadImage(IFormFile file){
+             string wwwroot = _hosting.WebRootPath;
+             string absolute = Path.Combine(wwwroot, "images", file.FileName);
+
+            using(var filestream = new FileStream(absolute, FileMode.Create))
+            file.CopyTo(filestream);
+
+            return View();
+        }      
+ 
 
 }
 }

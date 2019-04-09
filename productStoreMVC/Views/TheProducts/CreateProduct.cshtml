@@ -1,5 +1,8 @@
 @model Product
 
+@{
+    ViewData["PageTitle"]="create product";
+}
 <section>
         <header>
         <h3>Opprett et nytt produkt</h3>
@@ -10,9 +13,21 @@
                 <label asp-for="Title">Title på produktet
                 <input asp-for="Title" type="text">
                 </label>
+                <span asp-validation-for="Title" class="validation-error"></span>
+
+                 <label asp-for="Desc">Beskrivelse på produktet
+                <input asp-for="Desc" type="text">
+                </label>
+                
                 <label asp-for="Price">Pris
                  <input asp-for="Price" type="text">
                  </label>
+                     <span asp-validation-for="Price" class="validation-error"></span>
+
+                 
+    
+    
+
                  <input type="submit" value="Opprett produkt">
             </form>
         </section>

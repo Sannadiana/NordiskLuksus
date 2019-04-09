@@ -52,3 +52,6 @@
 /Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/productStoreMVC.dll
 /Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/productStoreMVC.pdb
 /Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/productStoreMVC.csproj.CopyComplete
+/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/TheProducts/UploadeImages.g.cshtml.cs
+/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_MainLayout.g.cshtml.cs
+/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/_ViewStart.g.cshtml.cs

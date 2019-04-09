@@ -1,0 +1,12 @@
+@{
+ViewData["PageTitel"] = "Upload image";
+}
+<section>
+    <h3>Last opp et bilde</h3>
+
+    <form asp-action="UploadImage" enctype="multipart/form-data">
+    <label>Velg et bilde</label>
+    <input type="file" name="file">
+    <input type="submit" value="Last opp bilde">
+    </form>
+</section>
