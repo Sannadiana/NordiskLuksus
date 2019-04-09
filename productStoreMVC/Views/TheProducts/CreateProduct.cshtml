@@ -1,0 +1,19 @@
+@model Product
+
+<section>
+        <header>
+        <h3>Opprett et nytt produkt</h3>
+        </header>
+
+        <section>
+            <form asp-action="CreateProduct">
+                <label asp-for="Title">Title på produktet
+                <input asp-for="Title" type="text">
+                </label>
+                <label asp-for="Price">Pris
+                 <input asp-for="Price" type="text">
+                 </label>
+                 <input type="submit" value="Opprett produkt">
+            </form>
+        </section>
+    </section>

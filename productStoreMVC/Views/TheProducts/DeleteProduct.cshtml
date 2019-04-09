@@ -1,0 +1,17 @@
+@model Product
+
+<section>
+        <header>
+        <h3>Slett Produkt</h3>
+        </header>
+
+        <section>
+            <h4> @Html.DisplayFor(product => product.Title)</h4>
+            <p>Pris: @Html.DisplayFor(product => product.Price)</p>
+
+            <form asp-action="DeleteMovie">
+                <input asp-for="ID" type="hidden">
+                 <input type="submit" value="Slett produkt">
+            </form>
+        </section>
+    </section>

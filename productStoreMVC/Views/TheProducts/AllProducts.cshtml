@@ -1,0 +1,28 @@
+@model IEnumerable<Product>
+
+    <section>
+        <header>
+        <h3>Alle produktene</h3>
+        </header>
+
+
+
+        <section>
+
+            <section>
+                <a asp-controller="TheProducts" asp-action="CreateProduct">Opprett nytt produkt</a>
+            </section>
+            @{
+                foreach (var product in Model)
+                {
+                    <h4>@product.Title</h4>
+                    <p>Price: @product.Price</p>
+                     <a asp-controller="TheProducts" asp-action="EditProduct" asp-route-id="@product.ID">Endre</a>
+                    <a asp-controller="TheProducts" asp-action="DeleteProduct" asp-route-id="@product.ID">Slett</a>
+                
+    
+        
+                }
+            }
+        </section>
+    </section>

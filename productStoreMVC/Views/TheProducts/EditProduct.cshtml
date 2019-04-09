@@ -1,0 +1,23 @@
+@model Product 
+
+<section>
+        <header>
+        <h3>Endre Produkt</h3>
+        </header>
+
+        <section>
+           <form asp-action="EditProduct">
+               <input asp-for="ID"type="hidden">
+               <label asp-for="Title">Title
+               <input asp-for="Title" type="Text">
+               </label>
+
+               <label asp-for="Price">Price
+                   <input asp-for="Price" type="Text">
+               </label>
+
+               <input type="submit" value="Save changes">
+           </form>
+        </section>
+    </section>
+
