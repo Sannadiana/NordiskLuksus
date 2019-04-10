@@ -12,8 +12,16 @@
                 </label>
                 <span asp-validation-for="Title" class="validation-error"></span>
 
-                <label>Bildenavn </label>
-                  <input asp-for="ImageSrc" type="text" >
+                <label>Bilde</label>
+                    <select asp-for="ImageSrc" type="text" >
+                        <option value="akevitt.jpg">Akevitt</option>
+                        <option value="kaviar.jpg">Kaviar</option>
+                        <option value="laks.jpg">Laks</option>
+                        <option value="rakfisk.jpg">Rakfisk</option>
+                        <option value="sild.jpg">Sild</option>
+                        <option value="surstrømming.jpg">Surstrømming</option>
+                    </select>
+                 
 
                  <label asp-for="Desc">Beskrivelse på produktet
                 <input asp-for="Desc" type="text">

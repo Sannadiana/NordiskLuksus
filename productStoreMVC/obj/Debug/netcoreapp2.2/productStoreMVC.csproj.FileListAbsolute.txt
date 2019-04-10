@@ -85,3 +85,4 @@
 /Users/i506272/Downloads/NordiskLuksus-master/productStoreMVC/obj/Debug/netcoreapp2.2/productStoreMVC.dll
 /Users/i506272/Downloads/NordiskLuksus-master/productStoreMVC/obj/Debug/netcoreapp2.2/productStoreMVC.pdb
 /Users/i506272/Downloads/NordiskLuksus-master/productStoreMVC/obj/Debug/netcoreapp2.2/productStoreMVC.csproj.CopyComplete
+/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/TheProducts/SetColor.g.cshtml.cs

@@ -9,6 +9,21 @@
 
 </head>
 <body>
+
+     <header id="header-content">
+        <a asp-action="AllProducts">Home</a>
+             @{
+                string color = Context.Session.GetString("Color");
+
+                if(color != ""){
+                    <style>
+                        a{
+                            color: @color;
+                        }
+                    </style>
+                }
+            }
+        </header>
     
     <div id="main-page-container">
 
@@ -17,6 +32,8 @@
             <ul>                
                 <li><a asp-action="AllProducts">Alle produkter</a></li>
                 <li><a asp-action="CreateProduct">Opprett produkt</a></li>
+                 <li><a asp-action="SetColor">Endre fargetema</a></li>
+                
             </ul>
         </nav>
 

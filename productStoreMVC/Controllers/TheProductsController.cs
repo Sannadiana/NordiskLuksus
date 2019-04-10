@@ -71,6 +71,16 @@ private readonly IHostingEnvironment _hosting;
             _hosting = hosting;
         }        
 
+ [HttpGet]
+        public IActionResult SetColor(){
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SetColor([Bind("Color")] ColorChoice colorChoice){
+            HttpContext.Session.SetString("Color", colorChoice.Color);
+            return RedirectToAction(nameof(AllProducts));
+        }
  /* 
 
   Jeg ønsker å også laste opp egen bilder for å sette dem og vise dem i produkt, men først på den måten jeg nå benytter for å i det heletatt vise dem. 

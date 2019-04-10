@@ -14,7 +14,8 @@ public class Product{
 
     public string Desc {get; set;}
 
-     //[Required(ErrorMessage="Produktet må ha en pris")] Hvorfor kommer denne ikke frem? 
+     [Required(ErrorMessage="Produktet må ha en pris")] //(ErrorMessage="Produktet må ha en pris")
+     [DataType(DataType.Currency)]
     public double Price {get; set;}
 }
 }

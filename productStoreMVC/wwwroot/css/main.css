@@ -2,7 +2,40 @@ body {
     font-family: sans-serif;
 }
 
+#header-content {
+    padding: 0.5rem;
+    background-color: rgb(220, 120, 0);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
 .validation-error {
     color: red;
     font-style: italic;
+}
+
+#main-page-navigation {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#main-page-navigation ul {
+    margin: 0;
+    padding: 0;
+}
+
+#main-page-navigation li {
+    display: inline-block;
+}
+
+#main-page-navigation a {
+    padding: 0.5rem;
+    background-color: rgb(220, 120, 0);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#main-page-navigation a:hover {
+    color: rgb(220, 120, 0);
+    background-color: rgb(255, 255, 255);
 }
