@@ -71,7 +71,12 @@ private readonly IHostingEnvironment _hosting;
             _hosting = hosting;
         }        
 
- 
+ /* 
+
+  Jeg ønsker å også laste opp egen bilder for å sette dem og vise dem i produkt, men først på den måten jeg nå benytter for å i det heletatt vise dem. 
+
+ For å gjøre begge deler, hvordan kalle på metodene eksternt for å 
+
  [HttpGet]
         public IActionResult UploadImage(){
             return View();
@@ -87,7 +92,7 @@ private readonly IHostingEnvironment _hosting;
 
             return View();
         }      
- 
 
+*/
 }
 }

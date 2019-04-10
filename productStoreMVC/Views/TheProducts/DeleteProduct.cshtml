@@ -7,10 +7,11 @@
 
         <section>
             <h4> @Html.DisplayFor(product => product.Title)</h4>
+            <img @Html.DisplayFor(product => product.ImageSrc)/>
             <p>@Html.DisplayFor(product => product.Desc)</p>
             <p>Pris: @Html.DisplayFor(product => product.Price)</p>
 
-            <form asp-action="DeleteMovie">
+            <form asp-action="DeleteProduct">
                 <input asp-for="ID" type="hidden">
                  <input type="submit" value="Slett produkt">
             </form>
