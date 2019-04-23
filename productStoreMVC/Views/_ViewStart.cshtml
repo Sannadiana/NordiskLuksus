@@ -1,3 +1,11 @@
 @{
-    Layout = "_MainLayout";
+    var admin = ViewContext.HttpContext.Request.Query["admin"];
+
+    string controllerLayout = "";
+    if(admin == "true"){
+        controllerLayout = "~/Views/Shared/_MainLayout.cshtml";
+    }else{
+        controllerLayout = "~/Views/Shared/_CustomerLayout.cshtml";
+    }
+    Layout = controllerLayout;
 }

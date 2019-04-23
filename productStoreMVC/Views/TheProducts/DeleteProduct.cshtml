@@ -5,9 +5,9 @@
         <h3>Slett Produkt</h3>
         </header>
 
-        <section>
+        <section id="card">
             <h4> @Html.DisplayFor(product => product.Title)</h4>
-            <img @Html.DisplayFor(product => product.ImageSrc)/>
+            <img src="~/images/@Html.DisplayFor(product => product.ImageSrc)">
             <p>@Html.DisplayFor(product => product.Desc)</p>
             <p>Pris: @Html.DisplayFor(product => product.Price)</p>
 

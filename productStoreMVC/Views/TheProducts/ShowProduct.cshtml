@@ -3,7 +3,7 @@
 
     <section>
         <header>
-        <h3>Produktoversikt</h3>
+        <h3>Produkt oversikt</h3>
         </header>
 
 
@@ -18,13 +18,6 @@
                      <img class="img-product"src="~/images/@product.ImageSrc"/>
                     <p>@product.Desc</p>
                     <p>Pris i NOK: @product.Price</p>
-                    @{
-                        if (ViewContext.HttpContext.Request.Query["admin"] == "true"){
-                            <a asp-controller="TheProducts" asp-action="EditProduct" asp-route-id="@product.ID">Endre</a>
-                            <a asp-controller="TheProducts" asp-action="DeleteProduct" asp-route-id="@product.ID">Slett</a>
-                        }
-                    }
-                     
                 </article>
                 </div>
     

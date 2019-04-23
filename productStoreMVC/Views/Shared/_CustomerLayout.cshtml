@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin</title>
+    <title>Customer Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="~/css/main.css">
 
 </head>
 <body>
-     <header id="header-content">
+    <header id="header-content">
         <a asp-action="AllProducts" asp-route-admin="true">Admin Page</a>
              @{
                 string color = Context.Session.GetString("Color");
@@ -24,17 +24,10 @@
             }
             <a asp-action="AllProducts" asp-route-admin="false">Customer Page</a>
         </header>
-    
     <div id="main-page-container">
 
 
-        <nav id="main-page-navigation">
-            <ul>                
-                <li><a asp-action="CreateProduct">Opprett produkt</a></li>
-                 <li><a asp-action="SetColor">Endre fargetema</a></li>
-                 <li><a asp-action="UploadImage">Last opp bilde </a></li>
-            </ul>
-        </nav>
+    
 
         <main>
             @RenderBody()
