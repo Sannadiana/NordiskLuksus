@@ -1,0 +1,14 @@
+@model IEnumerable<Comment>
+
+<section>
+
+    <h3>Alle kommentarer</h3>
+
+    <ul>
+        @foreach (var comment in Model)
+        {
+            <li>@comment.ToString()</li>
+        }
+    </ul>
+
+</section>

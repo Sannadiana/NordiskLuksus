@@ -11,6 +11,7 @@ namespace productStoreMVC.models{
         public string Text { get; set; }
         [ForeignKey("ProductID")]
         public int? ProductID { get; set; }
+
         public Product Product{ get; set; }
 
         public override string ToString(){

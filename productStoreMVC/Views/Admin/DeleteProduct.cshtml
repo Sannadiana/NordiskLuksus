@@ -5,7 +5,8 @@
         <h3>Slett Produkt</h3>
         </header>
 
-        <section id="card">
+    <div class="product-content">
+        <section>
             <h4> @Html.DisplayFor(product => product.Title)</h4>
             <img src="~/images/@Html.DisplayFor(product => product.ImageSrc)">
             <p>@Html.DisplayFor(product => product.Desc)</p>
@@ -16,4 +17,5 @@
                  <input type="submit" value="Slett produkt">
             </form>
         </section>
+        </div>
     </section>

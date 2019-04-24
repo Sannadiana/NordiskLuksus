@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/i506272/Documents/GitHub/productStoreMVC/productStoreMVC.csproj",
+  "FilePath": "/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/productStoreMVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2801,6 +2801,11 @@
     {
       "FilePath": "Views/_ViewStart.cshtml",
       "TargetPath": "Views/_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Customer/AllComments.cshtml",
+      "TargetPath": "Views/Customer/AllComments.cshtml",
       "FileKind": "mvc"
     },
     {

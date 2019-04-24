@@ -41,7 +41,7 @@ public async Task<IActionResult> AllProducts(){
         }
 
         [HttpPost]
-        public async Task<IActionResult> CommentProduct([Bind("UserName", "Text", "MovieId")] Comment comment){
+        public async Task<IActionResult> CommentProduct([Bind("UserName", "Text", "ProductID")] Comment comment){
             _context.Comment.Add(comment);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(AllProducts));
