@@ -1,4 +1,4 @@
-namespace productStoreMVC.Models{
+namespace productStoreMVC.models{
 
     public class ColorChoice{
 

@@ -1,7 +1,7 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-
-namespace productStoreMVC.Models{
+namespace productStoreMVC.models{
 public class Product{
     [Key]
 
@@ -13,9 +13,12 @@ public class Product{
     public string Title {get; set;}
 
     public string Desc {get; set;}
+   
 
      [Required(ErrorMessage="Produktet må ha en pris")] //(ErrorMessage="Produktet må ha en pris")
      [DataType(DataType.Currency)]
     public double Price {get; set;}
+
+    public ICollection<Comment> Comments { get; set; }
 }
 }

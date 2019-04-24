@@ -12418,11 +12418,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/productStoreMVC.csproj",
+      "projectUniqueName": "/Users/i506272/Documents/GitHub/productStoreMVC/productStoreMVC.csproj",
       "projectName": "productStoreMVC",
-      "projectPath": "/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/productStoreMVC.csproj",
+      "projectPath": "/Users/i506272/Documents/GitHub/productStoreMVC/productStoreMVC.csproj",
       "packagesPath": "/Users/i506272/.nuget/packages/",
-      "outputPath": "/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/",
+      "outputPath": "/Users/i506272/Documents/GitHub/productStoreMVC/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

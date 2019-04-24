@@ -1,0 +1,27 @@
+@model Comment
+
+<section>
+    <h3>Kommenter dette produktet</h3>
+
+    @{
+        Product product = (Product)ViewBag.Product;
+    }
+
+    <section>
+        <h3>@product.Title</h3>
+    </section>
+
+    <form asp-action="CommentProduct">
+        <input asp-for="ProductID" type="hidden" value="@product.ID">
+
+        <label>Ditt brukernavn</label>
+        <input asp-for="UserName" type="text">
+
+        <label>Din kommentar</label>
+        <input asp-for="Text" type="text">
+
+        <input type="submit" value="Lagre kommentar">
+
+    </form>
+
+</section>

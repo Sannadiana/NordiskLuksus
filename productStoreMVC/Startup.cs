@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
 using Microsoft.EntityFrameworkCore;
-using productStoreMVC.Models;
+using productStoreMVC.models;
 
 namespace productStoreMVC
 {
@@ -33,7 +33,7 @@ namespace productStoreMVC
             app.UseMvc(
                 routes => routes.MapRoute(
                     name:"default",
-                    template:"{controller=TheProducts}/{action=AllProducts}/{id?}"
+                    template:"{controller=Admin}/{action=AllProducts}/{id?}"
                 )
             );
         }

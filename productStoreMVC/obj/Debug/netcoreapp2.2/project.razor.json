@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/productStoreMVC.csproj",
+  "FilePath": "/Users/i506272/Documents/GitHub/productStoreMVC/productStoreMVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2759,38 +2759,38 @@
   "RootNamespace": "productStoreMVC",
   "Documents": [
     {
-      "FilePath": "Views/TheProducts/EditProduct.cshtml",
-      "TargetPath": "Views/TheProducts/EditProduct.cshtml",
+      "FilePath": "Views/Admin/DeleteProduct.cshtml",
+      "TargetPath": "Views/Admin/DeleteProduct.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Shared/_MainLayout.cshtml",
-      "TargetPath": "Views/Shared/_MainLayout.cshtml",
+      "FilePath": "Views/Customer/CommentProduct.cshtml",
+      "TargetPath": "Views/Customer/CommentProduct.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/TheProducts/CreateProduct.cshtml",
-      "TargetPath": "Views/TheProducts/CreateProduct.cshtml",
+      "FilePath": "Views/Shared/AllProducts.cshtml",
+      "TargetPath": "Views/Shared/AllProducts.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/TheProducts/DeleteProduct.cshtml",
-      "TargetPath": "Views/TheProducts/DeleteProduct.cshtml",
+      "FilePath": "Views/Admin/SetColor.cshtml",
+      "TargetPath": "Views/Admin/SetColor.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/TheProducts/ShowProduct.cshtml",
-      "TargetPath": "Views/TheProducts/ShowProduct.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views/TheProducts/AllProducts.cshtml",
-      "TargetPath": "Views/TheProducts/AllProducts.cshtml",
+      "FilePath": "Views/Admin/UploadImage.cshtml",
+      "TargetPath": "Views/Admin/UploadImage.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "Views/_ViewImports.cshtml",
       "TargetPath": "Views/_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Shared/_AdminLayout.cshtml",
+      "TargetPath": "Views/Shared/_AdminLayout.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2804,13 +2804,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/TheProducts/UploadImage.cshtml",
-      "TargetPath": "Views/TheProducts/UploadImage.cshtml",
+      "FilePath": "Views/Admin/EditProduct.cshtml",
+      "TargetPath": "Views/Admin/EditProduct.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/TheProducts/SetColor.cshtml",
-      "TargetPath": "Views/TheProducts/SetColor.cshtml",
+      "FilePath": "Views/Admin/CreateProduct.cshtml",
+      "TargetPath": "Views/Admin/CreateProduct.cshtml",
       "FileKind": "mvc"
     }
   ]

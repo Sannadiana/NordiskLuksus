@@ -6,11 +6,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
-using productStoreMVC.Models;
+using productStoreMVC.models;
 
 namespace productStoreMVC.Controllers{
 
-public class TheProductsController:Controller{
+public class AdminController:Controller{
 private readonly ProductContext _context;
 
 public async Task<IActionResult> AllProducts(){
@@ -66,7 +66,7 @@ public async Task<IActionResult> CreateProduct([Bind("ID", "Title","ImageSrc","D
 }
 
 private readonly IHostingEnvironment _hosting;
-        public TheProductsController(ProductContext context, IHostingEnvironment hosting){
+        public AdminController(ProductContext context, IHostingEnvironment hosting){
             _context = context;
             _hosting = hosting;
         }        

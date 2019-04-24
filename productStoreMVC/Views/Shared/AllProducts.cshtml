@@ -20,8 +20,10 @@
                     <p>Pris i NOK: @product.Price</p>
                     @{
                         if (ViewContext.HttpContext.Request.Query["admin"] == "true"){
-                            <a asp-controller="TheProducts" asp-action="EditProduct" asp-route-id="@product.ID">Endre</a>
-                            <a asp-controller="TheProducts" asp-action="DeleteProduct" asp-route-id="@product.ID">Slett</a>
+                            <a asp-controller="Admin" asp-action="EditProduct" asp-route-id="@product.ID">Endre</a>
+                            <a asp-controller="Admin" asp-action="DeleteProduct" asp-route-id="@product.ID">Slett</a>
+                        } else{
+                             <a asp-controller="Customer" asp-action="CommentProduct" asp-route-id="@product.ID">Kommenter produkt</a>
                         }
                     }
                      
