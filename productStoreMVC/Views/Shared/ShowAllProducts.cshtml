@@ -12,7 +12,6 @@
             @{
                 foreach (Product product in Model)
                 {
-                   
                     <div class="product-content">
                 <article>
                     <h4>@product.Title</h4>
@@ -20,9 +19,7 @@
                     <p>@product.Desc</p>
                     <p>Pris i NOK: @product.Price</p>
                     @{
-                       
-                            <a asp-controller="Admin" asp-action="EditProduct" asp-route-id="@product.Id">Endre</a>
-                            <a asp-controller="Admin" asp-action="DeleteProduct" asp-route-id="@product.Id">Slett</a>
+                             <a asp-controller="Customer" asp-action="CommentProduct" asp-route-id="@product.Id">Kommenter produkt</a>
                         
                     }
                      

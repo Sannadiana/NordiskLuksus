@@ -10,7 +10,7 @@ namespace productStoreMVC.Migrations
                 name: "Product",
                 columns: table => new
                 {
-                    ID = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     ImageSrc = table.Column<string>(nullable: true),
                     Title = table.Column<string>(nullable: false),
@@ -19,7 +19,7 @@ namespace productStoreMVC.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Product", x => x.ID);
+                    table.PrimaryKey("PK_Product", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -30,23 +30,23 @@ namespace productStoreMVC.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     UserName = table.Column<string>(nullable: true),
                     Text = table.Column<string>(nullable: true),
-                    ProductID = table.Column<int>(nullable: true)
+                    ProductId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Comment", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Comment_Product_ProductID",
-                        column: x => x.ProductID,
+                        name: "FK_Comment_Product_ProductId",
+                        column: x => x.ProductId,
                         principalTable: "Product",
-                        principalColumn: "ID",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comment_ProductID",
+                name: "IX_Comment_ProductId",
                 table: "Comment",
-                column: "ProductID");
+                column: "ProductId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

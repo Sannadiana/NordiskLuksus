@@ -14,19 +14,19 @@ public class AdminController:Controller{
 private readonly ProductContext _context;
 
 public async Task<IActionResult> AllProducts(){
-    List<Product> productList = await _context.Product.ToListAsync();
+    List<Product> productList = await _context.Product.Include("Comments").ToListAsync();
     return View (productList);
 }
 
 
 public async Task<IActionResult> EditProduct(int? id){
-    Product product = await _context.Product.SingleOrDefaultAsync(_product => _product.ID == id);
+    Product product = await _context.Product.SingleOrDefaultAsync(_product => _product.Id == id);
     return View(product);
 }
 
 [HttpPost]
 
-public async Task<IActionResult> EditProduct(int? id,[Bind("ID, Title, ImageSrc, Desc, Price")]Product product){
+public async Task<IActionResult> EditProduct(int? id,[Bind("Id, Title, ImageSrc, Desc, Price")]Product product){
     _context.Update(product);
     await _context.SaveChangesAsync();
     return RedirectToAction(nameof(AllProducts));
@@ -34,7 +34,7 @@ public async Task<IActionResult> EditProduct(int? id,[Bind("ID, Title, ImageSrc,
 
 
 public async Task<IActionResult> DeleteProduct(int? id){
-     Product product = await _context.Product.SingleOrDefaultAsync(_product => _product.ID == id);
+     Product product = await _context.Product.SingleOrDefaultAsync(_product => _product.Id == id);
     return View(product);
 }
 
@@ -42,7 +42,7 @@ public async Task<IActionResult> DeleteProduct(int? id){
 
 
 public async Task<IActionResult> DeleteProductConfirm(int? id){
-    Product product = await _context.Product.SingleOrDefaultAsync(_product => _product.ID == id);
+    Product product = await _context.Product.SingleOrDefaultAsync(_product => _product.Id == id);
      _context.Product.Remove(product);
     await _context.SaveChangesAsync();
     return RedirectToAction(nameof(AllProducts));
@@ -55,7 +55,7 @@ public async Task<IActionResult> DeleteProductConfirm(int? id){
 
 [HttpPost]
 
-public async Task<IActionResult> CreateProduct([Bind("ID", "Title","ImageSrc","Desc","Price")]Product product){
+public async Task<IActionResult> CreateProduct([Bind("Id", "Title","ImageSrc","Desc","Price")]Product product){
     if(ModelState.IsValid){
          _context.Product.Add(product);
          await _context.SaveChangesAsync();
@@ -71,17 +71,6 @@ private readonly IHostingEnvironment _hosting;
             _hosting = hosting;
         }        
 
- [HttpGet]
-        public IActionResult SetColor(){
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult SetColor([Bind("Color")] ColorChoice colorChoice){
-            HttpContext.Session.SetString("Color", colorChoice.Color);
-            return RedirectToAction(nameof(AllProducts));
-        }
- 
 
   
 

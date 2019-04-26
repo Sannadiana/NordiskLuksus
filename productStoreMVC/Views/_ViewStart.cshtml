@@ -1,8 +1,7 @@
 @{
-    var admin = ViewContext.HttpContext.Request.Query["admin"];
-
+    var controller = ViewContext.RouteData.Values["Controller"].ToString();
     string controllerLayout = "";
-    if(admin == "true"){
+    if(controller == "Admin"){
         controllerLayout = "~/Views/Shared/_AdminLayout.cshtml";
     }else{
         controllerLayout = "~/Views/Shared/_CustomerLayout.cshtml";

@@ -10,19 +10,10 @@
 </head>
 <body>
      <header id="header-content">
-        <a asp-action="AllProducts" asp-route-admin="true">Admin Page</a>
-             @{
-                string color = Context.Session.GetString("Color");
-
-                if(color != ""){
-                    <style>
-                        a{
-                            color: @color;
-                        }
-                    </style>
-                }
-            }
-            <a asp-action="AllProducts" asp-route-admin="false">Customer Page</a>
+            <nav>
+            <a aasp-controller="Admin"sp-action="AllProducts" asp-route-admin="true">Admin Page</a>
+            <a asp-controller="Customer" asp-action="ShowAllProducts" asp-route-admin="false">Customer Page</a>
+        </nav>
         </header>
     
     <div id="main-page-container">
@@ -30,9 +21,8 @@
 
         <nav id="main-page-navigation">
             <ul>                
-                <li><a asp-action="CreateProduct">Opprett produkt</a></li>
-                 <li><a asp-action="SetColor">Endre fargetema</a></li>
-                 <li><a asp-action="UploadImage">Last opp eget produktbilde </a></li>
+                <li><a asp-controller="Admin" asp-action="CreateProduct">Opprett produkt</a></li>
+                 <li><a asp-controller="Admin" asp-action="UploadImage">Last opp eget produktbilde </a></li>
             </ul>
         </nav>
 

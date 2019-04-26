@@ -19,32 +19,43 @@ namespace productStoreMVC.controllers{
         }
 
 
-public async Task<IActionResult> AllProducts(){
-    List<Product> productList = await _context.Product.ToListAsync();
+public async Task<IActionResult> ShowAllProducts(){
+    List<Product> productList = await _context.Product.Include("Comments").ToListAsync();
     return View (productList);
 }
 
 
 
  
+ [HttpGet]
+        public IActionResult SetColor(){
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SetColor([Bind("Color")] ColorChoice colorChoice){
+            HttpContext.Session.SetString("Color", colorChoice.Color);
+            return RedirectToAction(nameof(ShowAllProducts));
+        } 
+ 
 
         public async Task<IActionResult> AllComments(){
-            List<Comment> commentList = await _context.Comment.ToListAsync();
+            List<Product> commentList = await _context.Product.Include("Comments").ToListAsync();
             return View(commentList);
         }
 
         [HttpGet]
         public async Task<IActionResult> CommentProduct(int id){
-            Product product = await _context.Product.SingleOrDefaultAsync( _product => _product.ID == id);
+            Product product = await _context.Product.SingleOrDefaultAsync( _product => _product.Id == id);
             ViewBag.Product = product;
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> CommentProduct([Bind("UserName", "Text", "ProductID")] Comment comment){
+        public async Task<IActionResult> CommentProduct([Bind("UserName", "Text", "ProductId")] Comment comment){
             _context.Comment.Add(comment);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(AllProducts));
+            return RedirectToAction(nameof(ShowAllProducts));
         }
 
     }

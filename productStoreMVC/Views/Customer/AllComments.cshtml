@@ -1,14 +1,38 @@
-@model IEnumerable<Comment>
 
-<section>
+@model IEnumerable<Product>
 
-    <h3>Alle kommentarer</h3>
+    <section>
+        <header>
+        <h3>Produktoversikt</h3>
+        </header>
 
-    <ul>
-        @foreach (var comment in Model)
-        {
-            <li>@comment.ToString()</li>
-        }
-    </ul>
 
-</section>
+
+        <section class="card-container">
+            @{
+                foreach (Product product in Model)
+                {
+                   
+
+                    var numberofComments = product.Comments.Count();
+                    if(numberofComments !=0){
+                        <div class="product-content">
+                <article>
+                    <h4>@product.Title</h4>
+                     <img class="img-product"src="~/images/@product.ImageSrc"/>
+                    <p>Produkt kommentarer:</p>
+                     @foreach(Comment comment in product.Comments){
+                        <p>@comment.UserName</p>
+                    }
+                     
+                </article>
+                </div>
+
+                    }
+                    
+                    
+                
+                }
+            }
+        </section>
+    </section>

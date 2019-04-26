@@ -1,6 +1,5 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using productStoreMVC.models;
 
 namespace productStoreMVC.models{
 
@@ -9,13 +8,14 @@ namespace productStoreMVC.models{
         public int Id { get; set; }
         public string UserName { get; set; }
         public string Text { get; set; }
-        [ForeignKey("ProductID")]
-        public int? ProductID { get; set; }
+
+        [ForeignKey("ProductId")]
+        public int? ProductId { get; set; }
 
         public Product Product{ get; set; }
 
         public override string ToString(){
-            return $"{Id} {UserName} {Text} {ProductID}";
+            return $"{Id} {UserName} {Text} {ProductId}";
         }
 
     }

@@ -21,7 +21,7 @@ namespace productStoreMVC.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("ProductID");
+                    b.Property<int?>("ProductId");
 
                     b.Property<string>("Text");
 
@@ -29,14 +29,14 @@ namespace productStoreMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductID");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Comment");
                 });
 
             modelBuilder.Entity("productStoreMVC.models.Product", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Desc");
@@ -48,7 +48,7 @@ namespace productStoreMVC.Migrations
                     b.Property<string>("Title")
                         .IsRequired();
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("Product");
                 });
@@ -57,7 +57,7 @@ namespace productStoreMVC.Migrations
                 {
                     b.HasOne("productStoreMVC.models.Product", "Product")
                         .WithMany("Comments")
-                        .HasForeignKey("ProductID");
+                        .HasForeignKey("ProductId");
                 });
 #pragma warning restore 612, 618
         }
