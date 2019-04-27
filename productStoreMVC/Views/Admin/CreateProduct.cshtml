@@ -6,13 +6,15 @@
         </header>
 
         <section>
-            <form asp-action="CreateProduct">
+            <form asp-action="CreateProduct"  enctype="multipart/form-data">
                 <label asp-for="Title">Title på produktet
                 <input asp-for="Title" type="text">
                 </label>
                 <span asp-validation-for="Title" class="validation-error"></span>
-
-                <label>Bilde</label>
+                <label>Last opp produktbilde </label>
+                <input type="file" name="file">
+               <!-- 
+                <label>Velg eksisterende bilde</label>
                     <select asp-for="ImageSrc" type="text" >
                         <option value="akevitt.jpg">Akevitt</option>
                         <option value="kaviar.jpg">Kaviar</option>
@@ -21,8 +23,9 @@
                         <option value="sild.jpg">Sild</option>
                         <option value="surstrømming.jpg">Surstrømming</option>
                     </select>
-                 
-
+                    -->
+ 
+            
                  <label asp-for="Desc">Beskrivelse på produktet
                 <input asp-for="Desc" type="text">
                 </label>
@@ -31,10 +34,6 @@
                  <input asp-for="Price" type="text">
                  </label>
                      <span asp-validation-for="Price" class="validation-error"></span>
-
-                 
-    
-    
 
                  <input type="submit" value="Opprett produkt">
             </form>

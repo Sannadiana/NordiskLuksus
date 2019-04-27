@@ -11,8 +11,10 @@
 <body>
     <header id="header-content">
         <nav>
-            <a asp-controller="Admin"asp-action="AllProducts" asp-route-admin="true">Admin Page</a>
-            <a asp-controller="Customer" asp-action="ShowAllProducts" asp-route-admin="false">Customer Page</a>
+            <ul> 
+                <li><a asp-controller="Admin"asp-action="AllProducts">Admin Page</a></li>
+                <li><a asp-controller="Customer" asp-action="ShowAllProducts">Customer Page</a></li>
+             </ul>
         </nav>
 
              @{
@@ -31,10 +33,9 @@
     <div id="main-page-container">
 
         <nav id="main-page-navigation">
-            <ol>                
-                <li><a asp-controller="Customer" asp-action="AllComments">Alle produktkommentarer</a></li>
-                 <li><a asp-controller="Customer" asp-action="SetColor">Endre fargetema</a></li>
-            </ol>
+           <a asp-controller="Customer" asp-action="AllComments">Alle produktkommentarer</a>
+            <a asp-controller="Customer" asp-action="SetColor">Endre fargetema</a>
+           
         </nav>
     
 

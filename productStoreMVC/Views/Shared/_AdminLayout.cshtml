@@ -10,22 +10,17 @@
 </head>
 <body>
      <header id="header-content">
-            <nav>
-            <a aasp-controller="Admin"sp-action="AllProducts" asp-route-admin="true">Admin Page</a>
-            <a asp-controller="Customer" asp-action="ShowAllProducts" asp-route-admin="false">Customer Page</a>
+         <nav id="main-page-navigation">
+           <a asp-controller="Admin"sp-action="AllProducts" >Admin Page</a> 
+           <a asp-controller="Customer" asp-action="ShowAllProducts" >Customer Page</a>
         </nav>
         </header>
     
     <div id="main-page-container">
-
-
-        <nav id="main-page-navigation">
-            <ul>                
-                <li><a asp-controller="Admin" asp-action="CreateProduct">Opprett produkt</a></li>
-                 <li><a asp-controller="Admin" asp-action="UploadImage">Last opp eget produktbilde </a></li>
-            </ul>
-        </nav>
-
+         <nav id="main-page-navigation">
+           <a asp-controller="Admin" asp-action="CreateProduct">Opprett produkt</a>
+            <a asp-controller="Admin" asp-action="UploadImage">Last opp eget produktbilde </a>
+</nav>
         <main>
             @RenderBody()
         </main>

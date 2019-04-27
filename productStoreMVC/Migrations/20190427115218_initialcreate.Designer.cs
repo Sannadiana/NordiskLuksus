@@ -9,7 +9,7 @@ using productStoreMVC.models;
 namespace productStoreMVC.Migrations
 {
     [DbContext(typeof(ProductContext))]
-    [Migration("20190426171622_initialcreate")]
+    [Migration("20190427115218_initialcreate")]
     partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

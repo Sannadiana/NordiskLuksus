@@ -48,14 +48,15 @@ public async Task<IActionResult> DeleteProductConfirm(int? id){
     return RedirectToAction(nameof(AllProducts));
 }
 
-[HttpGet]
-        public IActionResult CreateProduct(){
-            return View();
-        }
 
 [HttpPost]
 
-public async Task<IActionResult> CreateProduct([Bind("Id", "Title","ImageSrc","Desc","Price")]Product product){
+public async Task<IActionResult> CreateProduct([Bind("Id", "Title","Desc","Price")]Product product, IFormFile file){
+    string wwwroot = _hosting.WebRootPath;
+             string absolute = Path.Combine(wwwroot, "images", file.FileName);
+
+            using(var filestream = new FileStream(absolute, FileMode.Create))
+            file.CopyTo(filestream);
     if(ModelState.IsValid){
          _context.Product.Add(product);
          await _context.SaveChangesAsync();
@@ -65,6 +66,13 @@ public async Task<IActionResult> CreateProduct([Bind("Id", "Title","ImageSrc","D
     }
 }
 
+
+[HttpGet]
+        public IActionResult CreateProduct(){
+            return View();
+        }
+
+ 
 private readonly IHostingEnvironment _hosting;
         public AdminController(ProductContext context, IHostingEnvironment hosting){
             _context = context;
@@ -73,22 +81,7 @@ private readonly IHostingEnvironment _hosting;
 
 
   
-
- [HttpGet]
-        public IActionResult UploadImage(){
-            return View();
-        }
-
-    [HttpPost]
-         public IActionResult UploadImage(IFormFile file){
-             string wwwroot = _hosting.WebRootPath;
-             string absolute = Path.Combine(wwwroot, "images", file.FileName);
-
-            using(var filestream = new FileStream(absolute, FileMode.Create))
-            file.CopyTo(filestream);
-
-            return View();
-        }      
+    
 
 
 }

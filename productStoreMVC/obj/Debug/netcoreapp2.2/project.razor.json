@@ -2764,28 +2764,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Shared/ShowAllProducts.cshtml",
-      "TargetPath": "Views/Shared/ShowAllProducts.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "Views/Customer/CommentProduct.cshtml",
       "TargetPath": "Views/Customer/CommentProduct.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views/Admin/AllProducts.cshtml",
+      "TargetPath": "Views/Admin/AllProducts.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Customer/SetColor.cshtml",
       "TargetPath": "Views/Customer/SetColor.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views/Shared/AllProducts.cshtml",
-      "TargetPath": "Views/Shared/AllProducts.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views/Admin/UploadImage.cshtml",
-      "TargetPath": "Views/Admin/UploadImage.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2821,6 +2811,11 @@
     {
       "FilePath": "Views/Admin/CreateProduct.cshtml",
       "TargetPath": "Views/Admin/CreateProduct.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Customer/ShowAllProducts.cshtml",
+      "TargetPath": "Views/Customer/ShowAllProducts.cshtml",
       "FileKind": "mvc"
     }
   ]

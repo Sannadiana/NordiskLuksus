@@ -33,7 +33,7 @@ namespace productStoreMVC
             app.UseMvc(
                 routes => routes.MapRoute(
                     name:"default",
-                    template:"{controller=Admin}/{action=AllProducts}/{id?}"
+                    template:"{controller=Customer}/{action=ShowAllProducts}/{id?}"
                 )
             );
         }

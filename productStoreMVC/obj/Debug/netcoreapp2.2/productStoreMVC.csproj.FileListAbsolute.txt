@@ -122,10 +122,9 @@
 /Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Admin/CreateProduct.g.cshtml.cs
 /Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Admin/DeleteProduct.g.cshtml.cs
 /Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Admin/EditProduct.g.cshtml.cs
-/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Admin/UploadImage.g.cshtml.cs
 /Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Customer/CommentProduct.g.cshtml.cs
-/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Shared/AllProducts.g.cshtml.cs
 /Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_AdminLayout.g.cshtml.cs
 /Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Customer/AllComments.g.cshtml.cs
 /Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Customer/SetColor.g.cshtml.cs
-/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Shared/ShowAllProducts.g.cshtml.cs
+/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Admin/AllProducts.g.cshtml.cs
+/Users/i506272/Documents/GitHub/NordiskLuksus/productStoreMVC/obj/Debug/netcoreapp2.2/Razor/Views/Customer/ShowAllProducts.g.cshtml.cs
