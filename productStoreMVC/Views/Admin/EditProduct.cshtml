@@ -6,15 +6,14 @@
         </header>
 
         <section>
-           <form asp-action="EditProduct">
+           <form asp-action="EditProduct" enctype="multipart/form-data">
                <input asp-for="Id"type="hidden">
                <label asp-for="Title">Title
                <input asp-for="Title" type="Text">
                </label>
                
-                <label asp-for="ImageSrc">Bildenavn
-               <input asp-for="ImageSrc" type="Text">
-               </label>
+               <label>Last opp produktbilde </label>
+                <input type="file" name="file">
             
                <label asp-for="Desc">Beskrivelse
                <input asp-for="Desc" type="Text">
