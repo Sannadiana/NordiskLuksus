@@ -7,10 +7,12 @@
 
         <section>
             <form asp-action="CreateProduct"  enctype="multipart/form-data">
+
                 <label asp-for="Title">Title på produktet
                 <input asp-for="Title" type="text">
                 </label>
                 <span asp-validation-for="Title" class="validation-error"></span>
+
                 <label>Last opp produktbilde </label>
                 <input type="file" name="file">
                 <span asp-validation-for="ImageSrc" class="validation-error"></span>
@@ -21,9 +23,10 @@
                 <span asp-validation-for="Desc" class="validation-error"></span>
                 
                 <label asp-for="Price">Pris
-                 <input asp-for="Price" type="text">
+                 <input asp-for="Price" type="number">
                  </label>
                  <span asp-validation-for="Price" class="validation-error"></span>
+                 
                  <input type="submit" value="Opprett produkt">
             </form>
         </section>

@@ -7,7 +7,7 @@ public class Product{
     [Key]
     public int Id {get; set;}
    
-    [Required(ErrorMessage="Last opp bilde")]
+
     public string ImageSrc {get; set;}
 
     [Required(ErrorMessage="Produktet må ha en tittel")]
@@ -17,8 +17,9 @@ public class Product{
     public string Desc {get; set;}
     
     [Required(ErrorMessage="Produktet må ha en pris")]
+    [Range(100,1000,ErrorMessage="Prisen må være mellom 100 & 1000 NOK")]
     
-    public double Price {get; set;}
+    public double? Price {get; set;}
 
     [ForeignKey("ProductId")]
     public ICollection<Comment> Comments { get; set; }
