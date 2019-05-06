@@ -9,11 +9,6 @@ public class ProductContext:DbContext{
     
     public DbSet<Product> Product {get; set;}
     public DbSet<Comment> Comment { get; set; }
-
-
-
-
-
     }
 
 }

@@ -11,7 +11,7 @@
 <body>
     <header id="header-content">
         <nav>
-            <ul> 
+            <ul style="list-style: none;" > 
                 <li><a asp-controller="Admin"asp-action="AllProducts">Admin Page</a></li>
                 <li><a asp-controller="Customer" asp-action="ShowAllProducts">Customer Page</a></li>
              </ul>
@@ -31,14 +31,12 @@
             
         </header>
     <div id="main-page-container">
-
-        <nav id="main-page-navigation">
+    <h2>Kundesiden</h2>
+        <nav class="main-page-navigation">
            <a asp-controller="Customer" asp-action="AllComments">Alle produktkommentarer</a>
-            <a asp-controller="Customer" asp-action="SetColor">Endre fargetema</a>
+            <a asp-controller="Customer" asp-action="SetColor">Endre ditt fargetema</a>
            
         </nav>
-    
-
         <main>
             @RenderBody()
         </main>

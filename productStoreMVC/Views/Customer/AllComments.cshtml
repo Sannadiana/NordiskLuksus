@@ -22,7 +22,7 @@
                      <img class="img-product"src="~/images/@product.ImageSrc"/>
                     <p>Produkt kommentarer:</p>
                      @foreach(Comment comment in product.Comments){
-                        <p>@comment.UserName : @comment.Text</p>
+                        <p class="product-comment">@comment.UserName : @comment.Text</p>
                     }
                      
                 </article>

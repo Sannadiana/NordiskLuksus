@@ -10,6 +10,9 @@ using productStoreMVC.models;
 
 namespace productStoreMVC.Controllers{
 
+/***************************************************************************************************************************** 
+Dette er kontrolleren for administrasjonssiden og denne tar for seg logikken rundt å opprette, slette og endre produkter
+/******************************************************************************************************************************/
 public class AdminController:Controller{
 private readonly ProductContext _context;
 
@@ -21,12 +24,12 @@ public async Task<IActionResult> AllProducts(){
 
 [HttpPost]
 public async Task<IActionResult> CreateProduct([Bind("Id", "Title","Desc","Price")]Product product, IFormFile file){
-    string wwwroot = _hosting.WebRootPath;
-    string absolute = Path.Combine(wwwroot, "images", file.FileName);
+       if(ModelState.IsValid){
+        string wwwroot = _hosting.WebRootPath;
+        string absolute = Path.Combine(wwwroot, "images", file.FileName);
 
-    using(var filestream = new FileStream(absolute, FileMode.Create))
-    file.CopyTo(filestream);
-    if(ModelState.IsValid){
+        using(var filestream = new FileStream(absolute, FileMode.Create))
+        file.CopyTo(filestream);
         product.ImageSrc = file.FileName;
          _context.Product.Add(product);
          await _context.SaveChangesAsync();
@@ -34,6 +37,8 @@ public async Task<IActionResult> CreateProduct([Bind("Id", "Title","Desc","Price
     }else{
         return View(product);
     }
+    
+    
 }
 
 
@@ -43,11 +48,6 @@ public async Task<IActionResult> CreateProduct([Bind("Id", "Title","Desc","Price
         }
 
  
-public async Task<IActionResult> EditProduct(int? id){
-    Product product = await _context.Product.SingleOrDefaultAsync(_product => _product.Id == id);
-    return View(product);
-}
-
 [HttpPost]
 public async Task<IActionResult> EditProduct(int? id,[Bind("Id, Title,Desc, Price")]Product product, IFormFile file){
     if (file != null) {
@@ -65,13 +65,15 @@ public async Task<IActionResult> EditProduct(int? id,[Bind("Id, Title,Desc, Pric
     return RedirectToAction(nameof(AllProducts));
 }
 
-public async Task<IActionResult> DeleteProduct(int? id){
+[HttpGet]
+public async Task<IActionResult> EditProduct(int? id){
     Product product = await _context.Product.SingleOrDefaultAsync(_product => _product.Id == id);
     return View(product);
 }
 
-[HttpPost,ActionName("DeleteProduct")]
+//Ved å inkludere comments i DeleteProductConfirm så slettes også de tilknyttede kommentarene til dette produktet
 
+[HttpPost,ActionName("DeleteProduct")]
 public async Task<IActionResult> DeleteProductConfirm(int? id){
     Product product = await _context.Product.Include("Comments").SingleOrDefaultAsync(_product => _product.Id == id);
     
@@ -81,16 +83,16 @@ public async Task<IActionResult> DeleteProductConfirm(int? id){
 }
 
 
+[HttpGet]
+public async Task<IActionResult> DeleteProduct(int? id){
+    Product product = await _context.Product.SingleOrDefaultAsync(_product => _product.Id == id);
+    return View(product);
+}
+
 private readonly IHostingEnvironment _hosting;
         public AdminController(ProductContext context, IHostingEnvironment hosting){
             _context = context;
             _hosting = hosting;
         }        
-
-
-  
-    
-
-
 }
 }

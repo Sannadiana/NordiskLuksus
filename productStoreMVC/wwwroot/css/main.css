@@ -1,6 +1,36 @@
+#header-content ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header-content li {
+    background-color: lightgray;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+#header-content li:hover {
+    background-color: darkgray;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
 .card-container {
     display: flex;
     text-align: center;
+    justify-content: space-between;
+}
+
+.main-page-navigation a {
+    background-color: lightgray;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.main-page-navigation a:hover {
+    background-color: darkgray;
+    padding: 1rem;
+    border-radius: 2rem;
 }
 
 .product-content article {
@@ -13,10 +43,6 @@
 .product-content article:hover {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.24), 0 1px 2px rgba(0, 0, 0, 0.24);
     border-radius: 1rem;
-}
-
-#page-navigation {
-    display: flex;
 }
 
 .validation-error {
@@ -32,4 +58,13 @@
 #main-page-container {
     justify-content: space-between;
     text-align: center;
+}
+
+.product-comment {
+    background-color: white;
+    padding: 1rem;
+}
+
+#colorform {
+    padding: 3rem;
 }

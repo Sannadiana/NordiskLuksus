@@ -1,10 +1,14 @@
 @model ColorChoice
 
-<form asp-action="SetColor">
+<form id="colorform"asp-action="SetColor">
 
-    <label for="Color">Sett farge ved å skrive den engelske fargen</label>
-    <input asp-for="Color" type="text">
-
+    <label for="Color">Velg fargetema</label>
+            <select asp-for="Color" type="text">
+                <option value="Red">Rødt</option>
+                <option value="Blue">Blått</option>
+                <option value="Purple">Lilla</option>
+                <option value="Pink">Rosa</option>
+                 <option value="Green">Grønn</option>
+            </select>
     <input type="submit" value="Lagre farge">
-
 </form>
